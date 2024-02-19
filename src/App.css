@@ -1,38 +1,44 @@
+:root {
+--primary: rgb(10, 10, 11);
+--primary-content: rgb(132, 132, 144);
+--primary-dark: rgb(0, 0, 0);
+--primary-light: rgb(34, 34, 38);
+
+--secondary: rgb(11, 10, 10);
+--secondary-content: rgb(144, 132, 132);
+--secondary-dark: rgb(0, 0, 0);
+--secondary-light: rgb(38, 34, 34);
+
+--background: rgb(17, 17, 34);
+--foreground: rgb(25, 25, 52);
+--border: rgb(41, 41, 86);
+
+--copy: rgb(250, 250, 253);
+--copy-light: rgb(203, 203, 230);
+--copy-lighter: rgb(135, 135, 197);
+
+--success: rgb(10, 11, 10);
+--warning: rgb(11, 11, 10);
+--error: rgb(11, 10, 10);
+--success-content: rgb(132, 144, 132);
+--warning-content: rgb(144, 144, 132);
+--error-content: rgb(144, 132, 132);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: var(--background);
+  padding-top:25px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page {
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--foreground);
+  padding: 1rem 2rem;
+  padding-top: 100px;
 }
