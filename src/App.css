@@ -1,28 +1,28 @@
 :root {
---primary: rgb(10, 10, 11);
---primary-content: rgb(132, 132, 144);
---primary-dark: rgb(0, 0, 0);
---primary-light: rgb(34, 34, 38);
-
---secondary: rgb(11, 10, 10);
---secondary-content: rgb(144, 132, 132);
---secondary-dark: rgb(0, 0, 0);
---secondary-light: rgb(38, 34, 34);
-
---background: rgb(17, 17, 34);
---foreground: rgb(25, 25, 52);
---border: rgb(41, 41, 86);
-
---copy: rgb(250, 250, 253);
---copy-light: rgb(203, 203, 230);
---copy-lighter: rgb(135, 135, 197);
-
---success: rgb(10, 11, 10);
---warning: rgb(11, 11, 10);
---error: rgb(11, 10, 10);
---success-content: rgb(132, 144, 132);
---warning-content: rgb(144, 144, 132);
---error-content: rgb(144, 132, 132);
+  --primary: rgb(233, 238, 241);
+  --primary-content: rgb(85, 116, 134);
+  --primary-dark: rgb(202, 214, 221);
+  --primary-light: rgb(255, 255, 255);
+  
+  --secondary: rgb(240, 233, 241);
+  --secondary-content: rgb(128, 85, 134);
+  --secondary-dark: rgb(219, 202, 221);
+  --secondary-light: rgb(255, 255, 255);
+  
+  --background: rgb(234, 241, 245);
+  --foreground: rgb(250, 252, 253);
+  --border: rgb(212, 226, 234);
+  
+  --copy: rgb(25, 42, 52);
+  --copy-light: rgb(66, 111, 138);
+  --copy-lighter: rgb(100, 150, 180);
+  
+  --success: rgb(233, 241, 233);
+  --warning: rgb(241, 241, 233);
+  --error: rgb(241, 233, 233);
+  --success-content: rgb(85, 134, 85);
+  --warning-content: rgb(134, 134, 85);
+  --error-content: rgb(134, 85, 85);
 }
 
 .App {
@@ -36,7 +36,7 @@
 }
 
 .page {
-  width: 50vw;
+  width: 75vw;
   height: 100vh;
   background-color: var(--foreground);
   padding: 1rem 2rem;

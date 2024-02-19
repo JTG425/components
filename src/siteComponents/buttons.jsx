@@ -5,7 +5,7 @@ import GradientButton from '../buttons/gradientButton';
 function Buttons(props) {
     return (
         <div className="buttons">
-            <div className="gradient-button">
+            <div className="gradient-button-div">
                 <p>Gradient Button</p>
                 <GradientButton />
             </div>

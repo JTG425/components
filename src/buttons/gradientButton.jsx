@@ -40,24 +40,28 @@ function getRelativeCoordinates(event, referenceElement) {
 }
 
 function GradientButton() {
-    const [mousePosition, setMousePosition] = useState({});
     const buttonRef = useRef();
 
     const handleMouseMove = e => {
-        setMousePosition(getRelativeCoordinates(e, buttonRef.current));
+        const mousePos = getRelativeCoordinates(e, buttonRef.current);
+        const gradientBackground = `radial-gradient(circle at ${mousePos.startX * 100}% ${mousePos.startY * 100}%, rgba(50,99,196,0.75) 0%, rgba(0,0,0,0) 50%)`;
+        buttonRef.current.style.background = gradientBackground;
     };
+
+    const handleMouseLeave = () => {
+        buttonRef.current.style.background = '';
+    };
+
 
     return (
         <motion.button
             className="gradient-button"
             ref={buttonRef}
             initial={{ scale: 0.9 }}
-            onMouseMove={e => handleMouseMove(e)}
-            whileHover={{
-                scale: 0.95,
-                background: `radial-gradient(circle at ${mousePosition.startX * 100}% ${mousePosition.startY * 100}%, #1a148c 0%, #2b2b2b 100%)`,
-            }}
+            onMouseMove={handleMouseMove}
+            whileHover={{ scale: 0.95 }}
             whileTap={{ scale: 0.9 }}
+            onHoverEnd={handleMouseLeave}
         >
             <span className="button-text">Hover Me</span>
         </motion.button>
@@ -65,3 +69,5 @@ function GradientButton() {
 }
 
 export default GradientButton;
+
+
